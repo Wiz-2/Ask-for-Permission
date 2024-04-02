@@ -51,7 +51,7 @@ app.get('/oauth2callback', (req, res) => {
 
 // Simple route to display "Permission Granted" message
 app.get('/permissionGranted', (req, res) => {
-  res.send('Permission Granted!');
+  res.sendFile(path.join(__dirname, 'public','permissionGranted.html'));
 });
 
 // Inside app.js, add a route to serve the authUrl:
